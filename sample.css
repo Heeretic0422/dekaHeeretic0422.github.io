@@ -9,29 +9,47 @@ body {
   background-image: url("cookie-img.jpg");
   background-size: cover;
   background-position: center;
+
   width: 100%;
   height: 100vh;
 
   position: relative;
 }
 
-/* タイトル */
+/* 欲望 共通 */
 .title {
   position: absolute;
   top: 30px;
   width: 100%;
   text-align: center;
-  font-size: 80px;
-  color: pink;
+  font-size: 90px;
+  margin: 0;
 }
 
-/* ボタン透明 */
+/* 最初は黒 */
+.title-start {
+  color: black;
+}
+
+/* 押した後はピンク */
+.title-okiba {
+  color: #ff1a94;
+}
+
+/* ボタンを右上に小さく */
 #start-btn {
   position: absolute;
-  inset: 0;
+  top: 10px;
+  right: 10px;
+
+  width: 15px;
+  height: 15px;
+
   background: none;
   border: none;
   cursor: pointer;
+
+  opacity: 0;
 }
 
 /* okiba */
@@ -45,12 +63,10 @@ body {
   gap: 20px;
 }
 
-/* okibaタイトル */
-.title2 {
+/* okiba内タイトルを上に固定 */
+.okiba .title {
   grid-column: 1 / -1;
-  text-align: center;
-  font-size: 80px;
-  color: pink;
+  position: relative;
   margin-bottom: 30px;
 }
 
@@ -70,3 +86,4 @@ body {
 .hidden {
   display: none;
 }
+
