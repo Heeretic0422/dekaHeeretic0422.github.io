@@ -1,192 +1,36 @@
-*{
-    margin:0;
+html, body{
+  margin:0;
+  padding:0;
+  background:black;
 }
-a:visited{
-    color:inherit;
-}
-a{
-    color:#3d291a;
-}
-#ue{
-    position:relative;
-    top:17px;
-    width:100%;
-    height:90px;  
-    color:#ff308d;
-    z-index:4;
-}
-.deka{
-    position:absolute;
-    width:100%;
-    height:598px;
-    z-index:5;
-}
-.h{
-    position:absolute;
-    width:100%;
-    height:598px;
-    z-index:3;
-}
-#h3{
-  position:relative;
-  font-size:44px;
-  text-align:center;
-  color:#ff308d;
-}
-html{
-  background-color:#000000;
-  z-index:-2;
-}
-.box{
-  background-image:url(dummy.jpg);
-  background-repeat:no-repeat;
-  background-size:cover;
-  text-align:center;
-  width:1366px;
-  height:508px; 
-  z-index:4;
-}
-#daily_image{
-    position:relative;
-    vertical-align: top;
-    top:78px;
-    z-index:4;
-    width:33%;
-    height:auto;
-}
-#daily1_image{
-    position:relative;
-    vertical-align: top;
-    top:78px;
-    z-index:4;
-    width:auto;
-    height:100%;
-}
-#daily2_image{
-    position:relative;
-    vertical-align: top;
-    top:78px;
-    z-index:4;
-    width:auto;
-    height:100%;
-}
-.cookie-img{
-  background-image:url(cookie-img.jpg);
-  background-repeat:no repeat;
-  background-size:cover;
-  position:fixed;
-  width:1366px;
-  height:598px;
-  border-style:none;
-  text-align:center;
-  }
-#h2{
-  position:relative;
-  bottom:100px;
-  font-size:70px;
-  text-align:center;
-  color:#000000;
-}
-#twitter1{
-  position:relative;
-  color:#3d291a;
-  font-size:20px;
-  left:674px;
-  top:110px;
-  width:100px;
-}
-#pixiv1{
-  position:relative;
-  color:#3d291a;
-  font-size:20px;
-  left:567px;
-  top:50px;
-  z-index:10;
-  width:100px;
-}
-#youtube1{
-  position:relative;
-  color:#3d291a;
-  font-size:20px;
-  bottom:9px;
-  left:1130px;
-  width:100px;
-}
-#yu-tyura1{
-  position:relative;
-  color:#3d291a;
-  font-size:20px;
-  left:1132px;
-  bottom:7px;
-  z-index:10;
-    width:100px;
-}
-#cookieclicker1{
-  position:relative;
-  color:#3d291a;
-  font-size:20px;
-  left:520px;
-  top:142px;
-    width:200px;
-}
-#crocodile1{
-  position:relative;
-  color:#3d291a;
-  font-size:20px;
-  bottom:70px;
-  left:950px;
-    width:140px;
-}
-#github1{
-  position:relative;
-  color:#3d291a;
-  font-size:20px;
-     top:25px;
-  left:1148px;
-  width:100px;
-}
-#pixel1{
-  position:relative;
-  color:#3d291a;
-  font-size:20px;
-     top:45px;
-  left:230px;
-  width:100px;
-}
-#discord1{
-  position:relative;
-  color:#3d291a;
-  font-size:20px;
-     bottom:165px;
-  left:233px;
-  width:100px;
-}
-#reddit1{
-  position:relative;
-  color:#3d291a;
-  font-size:20px;
-     bottom:53px;
-  left:1034px;
-  width:100px;
-}
-.hidden {
-  display: none;
-  width:1px;
-  height:1px;
-}
-button{
-  position:relative;
-  right:645px; 
-  top:416px;
-  width:1px;
-  height:1px;
-  z-index:100;
-  background:#4D3F3F;
-  border:none;
-}
+
+/* okibaを完全グリッド化 */
 .okiba{
-    position:relative;
-    width:1366px;
-    height:1000px;
-    top:731px;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap:20px;
+  padding:30px;
+  max-width:1400px;
+  margin:0 auto;
 }
+
+/* 画像をカード化 */
+.okiba a{
+  display:block;
+  border-radius:15px;
+  overflow:hidden;
+  transition:transform 0.2s;
+}
+
+.okiba a:hover{
+  transform:scale(1.03);
+}
+
+/* 全画像統一 */
+.okiba img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  display:block;
+}
+
