@@ -11,7 +11,7 @@ html, body{
   gap:20px;
   padding:30px;
   max-width:1400px;
-  margin:0 auto;
+  margin:auto;
 }
 
 /* 画像をカード化 */
@@ -31,6 +31,6 @@ html, body{
   width:100%;
   height:220px;
   object-fit:cover;
+  border-radius:15px;
   display:block;
 }
-
