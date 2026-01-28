@@ -16,14 +16,16 @@ body {
   position: relative;
 }
 
-/* 欲望 共通 */
+/* 欲望 共通（完全固定） */
 .title {
-  position: absolute;
+  position: fixed;
   top: 30px;
-  width: 100%;
-  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+
   font-size: 90px;
   margin: 0;
+  z-index: 1000;
 }
 
 /* 最初は黒 */
@@ -35,6 +37,7 @@ body {
 .title-okiba {
   color: #ff1a94;
 }
+
 
 /* ボタンを右上に小さく */
 #start-btn {
@@ -63,12 +66,17 @@ body {
   gap: 20px;
 }
 
-/* okiba内タイトルを上に固定 */
-.okiba .title {
-  grid-column: 1 / -1;
-  position: relative;
-  margin-bottom: 30px;
+.okiba {
+  padding-top: 160px;  /* ←追加 */
+
+  min-height: 100vh;
+  background: black;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
+
 
 /* 画像 */
 .okiba img {
