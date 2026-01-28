@@ -1,36 +1,72 @@
-html, body{
-  margin:0;
-  padding:0;
-  background:black;
+body {
+  margin: 0;
+  background: black;
+  overflow-x: hidden;
 }
 
-/* okibaを完全グリッド化 */
-.okiba{
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap:20px;
-  padding:30px;
-  max-width:1400px;
-  margin:auto;
+/* 背景画面 */
+.cookie-img {
+  background-image: url("cookie-img.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+
+  position: relative;
 }
 
-/* 画像をカード化 */
-.okiba a{
-  display:block;
-  border-radius:15px;
-  overflow:hidden;
-  transition:transform 0.2s;
+/* タイトル */
+.title {
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  text-align: center;
+  font-size: 80px;
+  color: pink;
 }
 
-.okiba a:hover{
-  transform:scale(1.03);
+/* ボタン透明 */
+#start-btn {
+  position: absolute;
+  inset: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-/* 全画像統一 */
-.okiba img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
-  border-radius:15px;
-  display:block;
+/* okiba */
+.okiba {
+  min-height: 100vh;
+  background: black;
+  padding: 40px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* okibaタイトル */
+.title2 {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 80px;
+  color: pink;
+  margin-bottom: 30px;
+}
+
+/* 画像 */
+.okiba img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.okiba img:hover {
+  transform: scale(1.05);
+}
+
+/* 非表示 */
+.hidden {
+  display: none;
 }
