@@ -1,20 +1,29 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
 <head>
-  <meta charset="UTF-8">
   <title>remember memento</title>
 
-  <!-- 必須追加 -->
+  <link rel="stylesheet" href="sample.css">
   <link rel="icon" href="favicon.ico">
   <meta name="robots" content="noindex" />
-
-  <link rel="stylesheet" href="sample.css">
 </head>
 
 <body>
 
-  <!-- okiba -->
-  <div class="okiba">
+  <!-- 背景画面 -->
+  <div class="cookie-img" id="start-screen">
+
+    <h1 class="title">欲望</h1>
+
+    <!-- 透明ボタン -->
+    <button id="start-btn"></button>
+
+  </div>
+
+ <!-- okiba（最初は非表示） -->
+  <div class="okiba hidden" id="okiba">
+
+    <h1 class="title2">欲望</h1>
 
     <a href="https://heeretic0422.github.io/oHeeretic0422.github.io/">
       <img src="o1.jpg" alt="o1">
@@ -178,6 +187,16 @@
 
     
   </div>
+  <script>
+    const btn = document.getElementById("start-btn");
+    const startScreen = document.getElementById("start-screen");
+    const okiba = document.getElementById("okiba");
+
+    btn.addEventListener("click", () => {
+      startScreen.classList.add("hidden");
+      okiba.classList.remove("hidden");
+    });
+  </script>
 
 </body>
 </html>
